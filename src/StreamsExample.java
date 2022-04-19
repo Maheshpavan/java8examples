@@ -13,5 +13,7 @@ public class StreamsExample {
         Optional<String> firstElement = elements.stream().findFirst();
         System.out.println("anyElement => "+(anyElement.isPresent()?anyElement.get():""));
         System.out.println("anyElement => "+(firstElement.isPresent()?firstElement.get():""));
+
+        System.out.println("its brach code");
     }
 }
