@@ -11,7 +11,7 @@ public class StreamsExample {
                         .collect(Collectors.toList());
         Optional<String> anyElement = elements.stream().findAny();
         Optional<String> firstElement = elements.stream().findFirst();
-        System.out.println("anyElement => "+anyElement.get());
-        System.out.println("anyElement => "+firstElement.get());
+        System.out.println("anyElement => "+(anyElement.isPresent()?anyElement.get():""));
+        System.out.println("anyElement => "+(firstElement.isPresent()?firstElement.get():""));
     }
 }
