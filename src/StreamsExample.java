@@ -1,6 +1,17 @@
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class StreamsExample {
 
     public static void main(String[] args) {
-        System.out.println("Test Program");
+        List<String> elements =
+                Stream.of("a", "b", "c").filter(element -> element.length()==1)
+                        .collect(Collectors.toList());
+        Optional<String> anyElement = elements.stream().findAny();
+        Optional<String> firstElement = elements.stream().findFirst();
+        System.out.println("anyElement => "+anyElement.get());
+        System.out.println("anyElement => "+firstElement.get());
     }
 }
